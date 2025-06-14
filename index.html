@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Maisan Hanif Dharmawan</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">MySite</div>
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+        <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
+        <ul class="navbar-menu">
+          <li class="fade-in"><a href="#home">Home</a></li>
+          <li class="fade-in"><a href="#about">About</a></li>
+          <li class="fade-in"><a href="#achievement">Achievement</a></li>
+          <li class="fade-in"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="section">
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text fade-in">
+            <h1>Maisan Hanif Dharmawan</h1>
+            <p>Mahasiswa Telkom University | Web Developer Enthusiast</p>
+          </div>
+          <div class="home-photo fade-in">
+            <img src="./assets/hanif.JPG" alt="Foto Profil" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="about" class="section">
+      <div class="container about-container">
+        <h2 class="fade-in">ABOUT ME</h2>
+        <p class="fade-in">
+          Hello everyone! My name is Maisan Hanif Dharmawan. I live on Jalan Dalang, in the Anggrek Loka Complex, Cipayung, East Jakarta. My hobbies include playing games and sports. I have always loved working with computers, which sparked
+          my interest in technology. This interest became a hobby, leading me to engage in activities such as gaming, creating projects using various programs, and assembling computers. Ultimately, these hobbies and interests have brought
+          me to where I am today, allowing me to achieve several awards at the provincial, national, and international levels.
+        </p>
+      </div>
+    </section> -->
+
+    <section id="about" class="newsection">
+      <div class="container about-container">
+        <h2 class="fade-in">ABOUT ME</h2>
+        <p class="fade-in">
+          Hello everyone! My name is Maisan Hanif Dharmawan. I live on Street Dalang, in the Anggrek Loka Complex, Cipayung, East Jakarta. My hobbies include playing games and sports. I have always loved working with computers, which
+          sparked my interest in technology. This interest became a hobby, leading me to engage in activities such as gaming, creating projects using various programs, and assembling computers. Ultimately, these hobbies and interests have
+          brought me to where I am today, allowing me to achieve several awards at the provincial, national, and international levels.
+        </p>
+      </div>
+    </section>
+
+    <section id="achievement" class="section">
+      <div class="container">
+        <div class="grid-container">
+          <div class="col fade-in education">
+            <h3>Education</h3>
+            <ul>
+              <li>Madrasah Ibtidaiyah Terpadu Al Hamid (Graduate 2018)</li>
+              <li>Madrasah Tsanawiyah Negeri 30 Jakarta (Graduate 2021)</li>
+              <li>Madrasah Aliyah Negeri 15 Jakarta (Graduate 2024)</li>
+              <li>Bachelor's in Computer Science - Telkom University (2024-Until Now)</li>
+            </ul>
+
+            <img src="./assets/education.jpeg " alt="Project Screenshot" class="project-photo" />
+          </div>
+          <div class="col fade-in experience">
+            <h3>Experience</h3>
+            <ul>
+              <li><b>Samsung Innovation Campus Batch 4</b></li>
+              <p>Passed until 3rd Stage (Making IoT Project using Python with Raspi 4)</p>
+              <li><b>2nd Place in Jakarta Robotic Competition</b></li>
+              <p>Category Animation in Jakarta Province Level (August 24th 2022)</p>
+              <li><b>2nd Place in International Youth Robot Competition</b></li>
+              <p>Category AI Project in Tangerang National Level (March 19th 2023)</p>
+              <li><b>1st Place in Madrasah Aliyah Plus Skills Expo Indonesia</b></li>
+              <p>Category Coding Mission in Palembang National Level (May 20th 2023)</p>
+              <li><b>2nd Place in International Youth Robot Competition</b></li>
+              <p>Category Creative in Malaysia International Level (June 2nd 2023)</p>
+            </ul>
+            <img src="./assets/Malaysia.jpg" alt="Project Screenshot" class="project-photo" />
+          </div>
+          <div class="col fade-in project">
+            <h3>Project</h3>
+            <p>Developed a web-based task management application with real-time collaboration features.</p>
+            <img src="/assets/Project.jpg" alt="Project Screenshot" class="project-photo" />
+          </div>
+        </div>
+        <h1 class="fade-in">Achievement</h1>
+
+        <div class="photo-container">
+          <div class="photo-col fade-in">
+            <img src="./assets/bintaro.jpg" alt="Achievement Photo 1" class="achievement-photo" />
+          </div>
+          <div class="photo-col fade-in">
+            <img src="./assets/palembang.jpg" alt="Achievement Photo 2" class="achievement-photo" />
+          </div>
+          <div class="photo-col fade-in">
+            <img src="./assets/malaysia serti.jpg" alt="Achievement Photo 3" class="achievement-photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="fade-in">Contact Me</h2>
+        <form id="contactForm">
+          <input type="text" id="nama" name="nama" placeholder="Nama" required class="fade-in" />
+          <input type="email" id="email" name="email" placeholder="Email" required class="fade-in" />
+          <textarea id="pesan" name="pesan" placeholder="Pesan" required class="fade-in"></textarea>
+          <button type="submit" class="fade-in">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".fade-in");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

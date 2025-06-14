@@ -1,0 +1,481 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 10px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* warna gradasi */
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #ffd700; /* warna hover kuning keemasan */
+}
+
+/* Toggle Button (Burger) */
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Fade-in Animation (optional) */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-icon {
+    display: block;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    background-color: #182848;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    border-top: 2px solid #4b6cb7;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-toggle:checked ~ .navbar-menu {
+    display: flex;
+  }
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.col {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.col p,
+.col li {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #666;
+}
+
+.col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* .achievement-photo {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.photo-col {
+  flex: 1;
+}
+
+.achievement-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.newsection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.about-container {
+  max-width: 800px;
+  padding: 200px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  /*BackgroundGambar*/
+  background-image: url("./assets/background.jpeg");
+  /*Gantidenganpathgambar*/
+  background-size: cover;
+  /*Agargambarmenyesuaikanukuran*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*Tambahkanoverlayagartekstetapterbaca*/
+  position: relative;
+  color: white;
+  /*Ubahwarnateksagarkontras*/
+  -webkit-animation: fadeInUp 1s ease-in-out;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-animation: fadeInUp 1s ease-in-out;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /*Overlayhitamtransparan*/
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.about-container h2 {
+  position: relative;
+  z-index: 2; /* Supaya teks berada di atas overlay */
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.about-container p {
+  position: relative;
+  z-index: 2; /* Supaya teks berada di atas overlay */
+  font-size: larger;
+}
+
+/* Animasi fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    max-width: 90%;
+  }
+}
+
+/* Atur container utama */
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+/* Atur lebar container */
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 50px;
+}
+
+/* Kolom teks */
+.home-text {
+  flex: 2;
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Kolom foto */
+.home-photo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-photo img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-photo {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 900px) {
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-photo img {
+    max-width: 250px;
+  }
+
+  .about-container {
+    padding: 50px;
+  }
+  .about-container h2 {
+    position: relative;
+    z-index: 2; /* Supaya teks berada di atas overlay */
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .about-container p {
+    position: relative;
+    z-index: 2; /* Supaya teks berada di atas overlay */
+    font-size: medium;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-photo img {
+    max-width: 250px;
+  }
+
+  .about-container {
+    padding: 50px;
+  }
+  .about-container h2 {
+    position: relative;
+    z-index: 2; /* Supaya teks berada di atas overlay */
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  .about-container p {
+    position: relative;
+    z-index: 2; /* Supaya teks berada di atas overlay */
+    font-size: small;
+  }
+}
+
+#about,
+#achievement,
+#contact {
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+}
