@@ -6,10 +6,25 @@ body {
 }
 
 header {
-  padding: 10px 0;
-  width: 100%;
+  position: absolute;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 10; /* pastikan lebih tinggi dari video */
+  background: transparent; /* biar menyatu dengan video */
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {
@@ -19,13 +34,12 @@ header {
 }
 
 .navbar {
-  background: linear-gradient(135deg, #4b6cb7, #182848); /* warna gradasi */
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  color: white;
+  color: black;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -43,7 +57,7 @@ header {
 }
 
 .navbar-menu li a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -125,7 +139,7 @@ header {
   flex-direction: column;
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  /* background: linear-gradient(135deg, #ece9e6, #ffffff); */
 }
 
 .container {
@@ -313,7 +327,20 @@ h2 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f9f9f9;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* Atur lebar container */
@@ -353,7 +380,7 @@ h2 {
   width: 100%;
   max-width: 600px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 100%;
 }
 
 .project-photo {
