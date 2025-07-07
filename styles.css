@@ -147,21 +147,54 @@ header {
   max-width: 1200px;
 }
 
+#project-container {
+  background: #fffdf8;
+}
+
+#project-container h1 {
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 50px;
   margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-family: cursive;
+}
+
+h3 {
+  font-family: cursive;
+}
+
+b {
+  font-family: cursive;
+}
+
+p {
+  color: grey;
+  font-family: cursive;
 }
 
 .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-container-project {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -240,45 +273,27 @@ h2 {
   padding: 10px;
 }
 
-.about-container {
-  max-width: 800px;
-  padding: 200px;
-  border-radius: 15px;
-  text-align: center;
-  animation: fadeInUp 1s ease-in-out;
-  /*BackgroundGambar*/
-  background-image: url("./assets/background.jpeg");
-  /*Gantidenganpathgambar*/
-  background-size: cover;
-  /*Agargambarmenyesuaikanukuran*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*Tambahkanoverlayagartekstetapterbaca*/
-  position: relative;
-  color: white;
-  /*Ubahwarnateksagarkontras*/
-  -webkit-animation: fadeInUp 1s ease-in-out;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  -webkit-animation: fadeInUp 1s ease-in-out;
-}
-
-.about-container::before {
+#about::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
+  height: 150px;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /*Overlayhitamtransparan*/
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 1));
+  z-index: 0;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  padding: 200px;
+  max-width: 800px;
+  text-align: center;
+  color: white;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  animation: fadeInUp 1s ease-in-out;
+  background: none;
 }
 
 .about-container h2 {
@@ -331,6 +346,66 @@ h2 {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 300px; /* sesuaikan tinggi gradasinya */
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+  z-index: 2; /* pastikan di atas video */
+}
+
+#about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  z-index: 0;
+}
+
+#achievement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  z-index: 0;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 12px;
+  font-family: cursive;
+  text-align: center;
+}
+
+.image-section {
+  margin-top: 30px;
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+  font-family: cursive;
+  margin-top: 20px;
+}
+
+.image-section img {
+  margin-bottom: 20px;
 }
 
 #bg-video {
@@ -445,10 +520,21 @@ h2 {
   }
 }
 
-#about,
-#achievement,
+#achievement {
+  background: #f4f4f4;
+  position: relative;
+}
+
 #contact {
   background: #f4f4f4;
+}
+
+#about {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .container {
