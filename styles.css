@@ -592,3 +592,112 @@ html {
     grid-template-columns: 1fr; /* Stack items on smaller screens */
   }
 }
+
+.grid-container-project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* default 3 kolom */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Tablet: ubah jadi 2 kolom */
+@media (max-width: 1024px) {
+  .grid-container-project {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* HP: ubah jadi 1 kolom */
+@media (max-width: 768px) {
+  .grid-container-project {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container-project .col {
+    margin-bottom: 30px;
+  }
+
+  .project-photo {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* SECTION SKILLS */
+#skills {
+  background: #fffdf8;
+  padding: 60px 20px;
+}
+
+.skills-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.skill-row {
+  text-align: center;
+}
+
+.skill-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.skill-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* agar responsif saat layar sempit */
+  margin-top: 10px;
+}
+
+.skill-image {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain; /* biar tidak gepeng */
+}
+
+/* Responsive Skill Box */
+@media (max-width: 768px) {
+  .skills-box {
+    padding: 20px;
+  }
+
+  .skill-title {
+    font-size: 1rem;
+  }
+
+  .skill-image {
+    max-width: 100px;
+  }
+
+  .skill-images {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-image {
+    max-width: 80px;
+  }
+
+  .skill-images {
+    gap: 15px;
+  }
+}
