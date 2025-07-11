@@ -53,7 +53,10 @@ header {
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  align-items: center; /* ✅ ini yang memastikan semua item rata tengah vertikal */
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-menu li a {
@@ -261,6 +264,10 @@ p {
   height: auto;
   display: block;
   border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .newsection {
@@ -332,7 +339,8 @@ p {
 @media (max-width: 480px) {
   .photo-container {
     grid-template-columns: 1fr; /* 1 column for mobile */
-    max-width: 90%;
+    max-width: 100%;
+    justify-items: center;
   }
 }
 
@@ -647,51 +655,61 @@ html {
 
 .skill-row {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .skill-title {
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
 }
 
 .skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1.5rem;
-  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center; /* Pusatkan isi grid */
+  gap: 70px; /* Jarak antar item */
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 20px auto 0;
 }
 
 .skill-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* Lebar tetap agar rapi */
 }
 
 .skill-image {
-  width: 80px;
+  width: 60px;
   height: auto;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .skill-image:hover {
   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
-.progress {
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  height: 8px;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 20px; /* Ukuran menyesuaikan logo */
 }
 
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  border-radius: 20px;
-  transition: width 0.5s ease-in-out;
+.star-rating .star {
+  color: #ccc;
+  transition: transform 0.2s ease;
+}
+
+.star-rating .star.filled {
+  color: #374151; /* Warna bintang penuh, abu gelap */
 }
 
 /* Responsive Skill Box */
@@ -721,4 +739,22 @@ html {
   .skill-images {
     gap: 15px;
   }
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #efefef, #e0e0e0); /* abu putih */
+  color: #333; /* teks abu gelap */
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* bayangan ringan */
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #e0e0e0, #d5d5d5); /* lebih gelap sedikit saat hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

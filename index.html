@@ -10,16 +10,27 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="navbar-brand">MySite</div>
-        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
-        <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
-        <ul class="navbar-menu">
-          <li class="fade-in"><a href="#home">Home</a></li>
-          <li class="fade-in"><a href="#about">About</a></li>
-          <li class="fade-in"><a href="#achievement">Achievement</a></li>
-          <li class="fade-in"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="navbar-brand">MySite</div>
+  <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+  <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
+  <ul class="navbar-menu">
+    <li class="fade-in"><a href="#home">Home</a></li>
+    <li class="fade-in"><a href="#about">About</a></li>
+    <li class="fade-in"><a href="#achievement">Education & Experience</a></li>
+    <li class="fade-in"><a href="#certification">Certification</a></li>
+    <li class="fade-in"><a href="#project">Project</a></li>
+    <li class="fade-in"><a href="#skills">Skills</a></li>
+    <li>
+      <a
+        href="https://drive.google.com/file/d/1VmFUx5a9_O60M2dRd7V3A2TuXVBP3sce/view?usp=sharing"
+        target="_blank"
+        class="nav-button"
+        >View CV</a
+      >
+    </li>
+  </ul>
+</nav>
+
     </header>
 
     <section id="home" class="section">
@@ -101,6 +112,7 @@
           </div>
         </div>
 
+        <section id="certification">
         <h1 class="fade-in">Certification</h1>
 
         <div class="photo-container">
@@ -142,37 +154,38 @@
           </div>
         </div>
       </div>
+      </section>
     </section>
 
     <!-- SECTION BARU UNTUK PROJECT -->
-    <section id="project-container" class="section">
+    <section id="project" class="section">
       <div class="container">
         <h1 class="fade-in">My Projects</h1>
         <div class="grid-container-project">
           <div class="col fade-in">
             <h3>Project Coding</h3>
             <p class="project-description">A web-based e-commerce application built with the Laravel framework, utilizing React and PHP with CRUD.</p>
-            <img src="./assets/Project.jpg" alt="Coding Project" class="project-photo" />
-            <img src="./assets/dashboardweb.jpg" alt="Coding Project" class="project-photo" />
-            <img src="./assets/database1.jpg" alt="Coding Project" class="project-photo" />
+            <img src="/assets/Project.jpg" alt="Coding Project" class="project-photo" />
+            <img src="/assets/dashboardweb.jpg" alt="Coding Project" class="project-photo" />
+            <img src="/assets/database1.jpg" alt="Coding Project" class="project-photo" />
           </div>
 
           <div class="col fade-in">
             <h3>Project Video</h3>
             <p class="project-description">Making a short movie title "Patriotism" with Adobe Premiere Pro</p>
-            <img src="./assets/film1.jpg" alt="Video Project" class="project-photo" />
+            <img src="/assets/film1.jpg" alt="Video Project" class="project-photo" />
             <p class="project-description">Editing for youtube video gaming with Capcut</p>
-            <img src="./assets/yutub1.jpg" alt="Video Project" class="project-photo" />
-            <img src="./assets/yutub2.jpg" alt="Video Project" class="project-photo" />
-            <img src="./assets/yutub3.jpg" alt="Video Project" class="project-photo" />
+            <img src="/assets/yutub1.jpg" alt="Video Project" class="project-photo" />
+            <img src="/assets/yutub2.jpg" alt="Video Project" class="project-photo" />
+            <img src="/assets/yutub3.jpg" alt="Video Project" class="project-photo" />
           </div>
 
           <div class="col fade-in">
             <h3>UI/UX Design</h3>
             <p class="project-description">Modern user interface design for mobile and web applications using Figma.</p>
-            <img src="./assets/figma1.jpg" alt="UI/UX Project" class="project-photo" />
+            <img src="/assets/figma1.jpg" alt="UI/UX Project" class="project-photo" />
             <p class="project-description">Designed modern and responsive user interfaces web applications using Figma, focusing on user experience and visual consistency.</p>
-            <img src="./assets/website1.jpg" alt="UI/UX Project" class="project-photo" />
+            <img src="/assets/website1.jpg" alt="UI/UX Project" class="project-photo" />
           </div>
         </div>
       </div>
@@ -183,53 +196,75 @@
       <div class="container">
         <h2 class="fade-in">My Skill</h2>
         <div class="skills-box fade-in">
-          <!-- <div class="skill-row">
-            <p class="skill-title">Frontend Development</p>
-            <div class="skill-images">
-              <img src="./assets/html.png" alt="Frontend Skill" class="skill-image" />
-              <img src="./assets/vscode.png" alt="Frontend Skill" class="skill-image" />
-              <img src="./assets/laravel.png" alt="Frontend Skill" class="skill-image" />
-              <img src="./assets/react.png" alt="Frontend Skill" class="skill-image" />
-            </div>
-          </div> -->
           <div class="skill-row">
             <p class="skill-title">Frontend Development</p>
             <div class="skill-grid">
               <div class="skill-item">
-                <img src="./assets/html.png" alt="HTML" class="skill-image" />
-                <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                <img src="./assets/html2.png" alt="HTML" class="skill-image" />
+                <div class="star-rating" data-rating="9"></div>
+                <p>HTML & CSS Skills : 9/10</p>
               </div>
+
               <div class="skill-item">
-                <img src="./assets/vscode.png" alt="VS Code" class="skill-image" />
-                <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                <img src="./assets/vscode.png" alt="vscode" class="skill-image" />
+                <div class="star-rating" data-rating="9"></div>
+                <p>Visual Studio Code Skills : 9/10</p>
               </div>
+
               <div class="skill-item">
-                <img src="./assets/laravel.png" alt="Laravel" class="skill-image" />
-                <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+                <img src="./assets/laravel.png" alt="laravel" class="skill-image" />
+                <div class="star-rating" data-rating="8"></div>
+                <p>Laravel Skills : 8/10</p>
               </div>
+
               <div class="skill-item">
-                <img src="./assets/react.png" alt="React" class="skill-image" />
-                <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                <img src="./assets/react.png" alt="react" class="skill-image" />
+                <div class="star-rating" data-rating="7"></div>
+                <p>React Skills : 7/10</p>
               </div>
             </div>
           </div>
 
           <div class="skill-row">
             <p class="skill-title">UI/UX Design</p>
-            <img src="./assets/Figma-logo-design-tool-prototyping-transparent-PNG-image.png" alt="UI/UX Skill" class="skill-image" />
+            <div class="skill-grid">
+              <div class="skill-item">
+                <img
+                  src="./assets/logo1.png
+                "
+                  alt="logo1"
+                  class="skill-image"
+                />
+                <div class="star-rating" data-rating="8"></div>
+                <p>HTML & CSS Skills : 8/10</p>
+              </div>
+            </div>
           </div>
           <div class="skill-row">
             <p class="skill-title">Video Editing</p>
-            <img src="./assets/premiere.png" alt="Video Editing Skill" class="skill-image" />
-            <img src="./assets/capcut.png" alt="Video Editing Skill" class="skill-image" />
+            <div class="skill-grid">
+              <div class="skill-item">
+                <img
+                  src="./assets/premiere.png
+                "
+                  alt="Premiere"
+                  class="skill-image"
+                />
+                <div class="star-rating" data-rating="7"></div>
+                <p>Adobe Premiere Pro Skills : 7/10</p>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="./assets/capcut.png
+                "
+                  alt="Capcut"
+                  class="skill-image"
+                />
+                <div class="star-rating" data-rating="9"></div>
+                <p>Capcut Skills : 9/10</p>
+              </div>
+            </div>
           </div>
-          <!-- Tambahkan baris skill di bawah ini jika ingin menambahkan -->
-          <!-- 
-      <div class="skill-row">
-        <p class="skill-title">Skill Baru</p>
-        <img src="./assets/namagambar.png" alt="Skill Baru" class="skill-image" />
-      </div>
-      -->
         </div>
       </div>
     </section>
@@ -249,6 +284,16 @@
         );
 
         elements.forEach((el) => observer.observe(el));
+      });
+      document.querySelectorAll(".star-rating").forEach((container) => {
+        const rating = parseInt(container.getAttribute("data-rating"), 10) || 0;
+        for (let i = 1; i <= 10; i++) {
+          const star = document.createElement("span");
+          star.classList.add("star");
+          star.innerHTML = "&#9733;"; // Unicode star ★
+          if (i <= rating) star.classList.add("filled");
+          container.appendChild(star);
+        }
       });
     </script>
   </body>
