@@ -527,7 +527,7 @@ p {
   }
 
   .about-container {
-    padding: 50px;
+    padding: 25px;
   }
   .about-container h2 {
     position: relative;
@@ -539,7 +539,8 @@ p {
   .about-container p {
     position: relative;
     z-index: 2; /* Supaya teks berada di atas overlay */
-    font-size: x-small;
+    font-size: small;
+    text-align: justify;
   }
 }
 
