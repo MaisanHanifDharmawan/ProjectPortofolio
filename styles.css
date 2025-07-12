@@ -527,13 +527,13 @@ p {
   }
 
   .about-container {
-    padding: 25px;
+    padding: 15px;
   }
   .about-container h2 {
     position: relative;
     z-index: 2; /* Supaya teks berada di atas overlay */
     font-weight: bold;
-    font-size: medium;
+    font-size: x-large;
   }
 
   .about-container p {
