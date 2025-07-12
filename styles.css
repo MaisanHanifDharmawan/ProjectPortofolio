@@ -508,7 +508,22 @@ p {
   }
 
   .home-photo img {
-    max-width: 250px;
+    max-width: 200px;
+  }
+
+  .home-text {
+    flex: 2;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .home-text p {
+    font-size: 1.2rem;
+    color: #555;
   }
 
   .about-container {
@@ -524,7 +539,7 @@ p {
   .about-container p {
     position: relative;
     z-index: 2; /* Supaya teks berada di atas overlay */
-    font-size: small;
+    font-size: x-small;
   }
 }
 
@@ -675,6 +690,22 @@ html {
 }
 
 .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* Lebar tetap agar rapi */
+}
+
+.skill-gridvideo {
+  display: flex;
+  justify-content: center; /* Pusatkan isi grid */
+  gap: 70px; /* Jarak antar item */
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+.skill-itemvideo {
   display: flex;
   flex-direction: column;
   align-items: center;
